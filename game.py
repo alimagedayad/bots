@@ -213,7 +213,7 @@ permanent_scores = [[None] * 9, [None] * 9]
 
 dice = [0, 0, 0, 0, 0]
 title()
-psphelper.ShowTableByList("Scoreboard", names, categories, scores)
+functions.ShowTableByList("Scoreboard", names, categories, scores)
 
 scores[0] = [0] * 9
 scores[1] = [0] * 9
@@ -232,7 +232,7 @@ for i in range(1, 19):
     outer_loop_breaker = 1
     if i != 1:
         title()
-        psphelper.ShowTableByList("Scoreboard", names, categories, permanent_scores)
+        functions.ShowTableByList("Scoreboard", names, categories, permanent_scores)
 
         playersscore()
         playerturn()
@@ -266,7 +266,7 @@ for i in range(1, 19):
         scores[currentplayerlist()][8] = orchestra(dice)
         # band category
         scores[currentplayerlist()][8] = orchestra(dice)
-        psphelper.ShowTableByList("Category Scores", [], categories, [scores[currentplayerlist()]])
+        functions.ShowTableByList("Category Scores", [], categories, [scores[currentplayerlist()]])
 
 
         x = True
@@ -303,7 +303,7 @@ for i in range(1, 19):
                 if desired_category.lower() in categories_lowercase:
                     if players_categories[currentplayerlist()][str(desired_category.lower())] == 0:
                         add_score(desired_category.lower())
-                        psphelper.ClearScreen()
+                        functions.ClearScreen()
                         players_categories[currentplayerlist()][str(desired_category.lower())] = 1
                         nextturn()
                         outer_loop_breaker = 0
@@ -341,13 +341,13 @@ for i in range(1, 19):
             scores[currentplayerlist()][7] = band(cheat_dice)
             scores[currentplayerlist()][8] = orchestra(cheat_dice)
             # band category
-            psphelper.ShowTableByList("Category Scores", [], categories, [scores[currentplayerlist()]])
+            functions.ShowTableByList("Category Scores", [], categories, [scores[currentplayerlist()]])
             while k == 1:
                 desired_category = input("Enter your desired category: ")
                 if desired_category.lower() in categories_lowercase:
                     if players_categories[currentplayerlist()][str(desired_category.lower())] == 0:
                         add_score(desired_category.lower())
-                        psphelper.ClearScreen()
+                        functions.ClearScreen()
                         players_categories[currentplayerlist()][str(desired_category.lower())] = 1
                         cheat_activated[currentplayerlist()] = True
                         nextturn()
@@ -356,9 +356,9 @@ for i in range(1, 19):
                     else:
                         print("ERROR: Category '" + desired_category.lower() + "' has been used.")
 
-psphelper.ClearScreen()
+functions.ClearScreen()
 title()
-psphelper.ShowTableByList("Scoreboard", names, categories, permanent_scores)
+functions.ShowTableByList("Scoreboard", names, categories, permanent_scores)
 playersscore()
 winner()
 print("=" * 8)
