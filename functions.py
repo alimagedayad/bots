@@ -122,28 +122,28 @@ def ShowTableByList(title, listRowNames, listColNames, listData):
 
 
 	
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
     
-    names = ["Alice", "Bob", "Cindy"];
-    subjects = ["Engineering", "Arts", "Programming", "Business"];
+#     names = ["Alice", "Bob", "Cindy"];
+#     subjects = ["Engineering", "Arts", "Programming", "Business"];
 
-    # Marks organized in a list for each student, to be used for ShowTableByList()
-    marksList = [ 
-        [20.5, None, 41.0, 82.39], # Alice's marks
-        [None, 53.1, 91.26, 65.1], # Bob's marks
-        [64.5, 33.321, None, None], # Cindy's marks
-    ];
+#     # Marks organized in a list for each student, to be used for ShowTableByList()
+#     marksList = [ 
+#         [20.5, None, 41.0, 82.39], # Alice's marks
+#         [None, 53.1, 91.26, 65.1], # Bob's marks
+#         [64.5, 33.321, None, None], # Cindy's marks
+#     ];
 
-    # Marks organized in a dictionary for each student, to be used for ShowTableByDictionary()
-    marksDictList = [ 
-        {"Engineering": 20.5, "Programming": 41.0, "Business": 82.39}, # Alice's marks
-        {"Arts": 53.1, "Programming": 91.26, "Business": 65.1}, # Bob's marks
-        {"Engineering": 64.5, "Arts": 33.321}, # Cindy's marks
-    ];
+#     # Marks organized in a dictionary for each student, to be used for ShowTableByDictionary()
+#     marksDictList = [ 
+#         {"Engineering": 20.5, "Programming": 41.0, "Business": 82.39}, # Alice's marks
+#         {"Arts": 53.1, "Programming": 91.26, "Business": 65.1}, # Bob's marks
+#         {"Engineering": 64.5, "Arts": 33.321}, # Cindy's marks
+#     ];
 
-    # Show table (data stored as list of list)
-    ShowTableByList("Coursework", names, subjects, marksList);
+#     # Show table (data stored as list of list)
+#     ShowTableByList("Coursework", names, subjects, marksList);
 
-    # Show table (data stored as list of dictionary)
-    ShowTableByDictionary("Coursework", names, subjects, subjects, marksDictList);
+#     # Show table (data stored as list of dictionary)
+#     ShowTableByDictionary("Coursework", names, subjects, subjects, marksDictList);
