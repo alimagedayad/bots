@@ -12,7 +12,7 @@ player2turn = 0
 # game title
 
 def title():
-    txt = " Battle of the Sexes (B.O.T.S) "
+    txt = " Battle of the Sixes (B.O.T.S) "
     print(txt.center(80, "="))
 
 # function that generates the random dice
